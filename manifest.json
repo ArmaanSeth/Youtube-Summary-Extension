@@ -1,0 +1,30 @@
+{
+    "name": "SummarizeYoutube",
+    "version": "0.0.1",
+    "description": "summarixing youtube video",
+    "action":{
+        "default_icon":{
+            "128": "logo.png"
+        },
+        "default_popup": "./popup.html"
+        
+    },
+    "manifest_version": 3,
+    "permissions": [ "storage", "tabs", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": ["*.png", "*.svg"],
+          "matches": ["<all_urls>"]
+        }
+    ]
+}
