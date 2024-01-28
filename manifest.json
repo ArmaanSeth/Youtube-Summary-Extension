@@ -1,7 +1,10 @@
 {
     "name": "SummarizeYoutube",
     "version": "0.0.1",
-    "description": "summarixing youtube video",
+    "description": "Automatically comment on youtube based on video summary",
+    "icons":{
+        "128": "logo.png"
+    },
     "action":{
         "default_icon":{
             "128": "logo.png"
